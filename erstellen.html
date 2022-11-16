@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lieferschein erstellen</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="bodyerstellen">
+
+  <div class="icon-bar2">
+    <a href="menü.html"><i class="fa fa-home"></i></a>
+    <a href="suchen.html"><i class="fa fa-search"></i></a>
+  </div>
+
+  <div class="container">
+    <form class="form" action="/erstellen" id="createlf" method="POST">
+      <h1 class="title">Lieferschein erstellen</h1>
+      <p class="texts">Filiale</p>
+      <select name="filialen" id="filialen">
+        <!--required einfügen-->
+        <option value="Auswählen">---Filiale auswählen---</option>
+        <option value="Ried">Ried</option>
+        <option value="Braunau">Braunau</option>
+        <option value="Schärding">Schärding</option>
+        <option value="Grieskirchen">Grieskirchen</option>
+        <option value="Kirchdorf">Kirchdorf</option>
+        <option value="Gmunden">Gmunden</option>
+        <option value="Mauthausen">Mauthausen</option>
+        <option value="Salzburg">Salzburg</option>
+        <option value="Eferding">Eferding</option>
+        <option value="Mattighofen">Mattighofen</option>
+        <option value="Bad Hall">Bad Hall</option>
+        <option value="Webshop">Webshop</option>
+        <option value="Objekt">Objekt</option>
+      </select>
+      <p class="texts">Verkäufer/in</p>
+      <input name="Verkäuferin" autocomplete="on" class="form__input" placeholder="Verkäufer/in eingeben">
+      <!--required einfügen-->
+
+      <h1 class="sectortitle">Kundendaten</h1>
+      <p class="texts">Titel</p>
+      <input name="titel" class="form__input" placeholder="ggf. Titel eingeben">
+      <p class="texts">Vorname</p>
+      <input name="vorname" class="form__input" placeholder="Vorname eingeben">
+      <!--required einfügen-->
+      <p class="texts">Nachname</p>
+      <input name="nachname" class="form__input" placeholder="Nachname eingeben">
+      <!--required einfügen-->
+      <p class="texts">Adresse</p>
+      <input name="adresse" class="form__input" placeholder="Adresse eingeben">
+      <!--required einfügen-->
+      <p class="texts">Postleitzahl</p>
+      <input name="PLZ" class="form__input" placeholder="PLZ eingeben">
+      <!--required einfügen-->
+      <p class="texts">Telefon</p>
+      <input name="telnummer" type="tel" class="form__input" placeholder="Telefonnummer eingeben">
+      <!--required einfügen-->
+
+      <h1 class="sectortitle">Lieferungsdaten</h1>
+      <p class="texts">Liefernummer</p>
+      <p>Id einfügen</p>
+      <p class="texts">Lieferdatum</p>
+      <input name="ldatum" type="date" class="calender">
+      <!--required einfügen-->
+      <p class="texts">Lieferzeit</p>
+      <input name="lzeit" class="form__input" placeholder="Lieferzeit eingeben">
+
+      <h1 class="sectortitle">Ware</h1>
+
+      <div class="wareneingabe">
+        <table id="interactivwe">
+          <tr>
+            <th>Menge</th>
+            <th>Bezeichnung</th>
+            <th>Einzelpreis/€</th>
+            <th>Gesamtpreis/€</th>
+          </tr>
+          <tr>
+            <td><input id="meng_" name="menge" class="form__input_wareneingabe" placeholder="Menge"></td>
+            <td><input id="bez_" name="bezeichnung" class="form__input_wareneingabe" placeholder="Bezeichnung"></td>
+            <td><input id="einp_" name="einzelp" class="form__input_wareneingabe" placeholder="Einzelpreis"
+                onblur="add_number()"></td>
+            <td><input type="text" id="txtresult_" name="result" class="form__input_wareneingabe"></td>
+          </tr>
+        </table>
+
+        <button type="button" onclick="addEingabe()">+</button>
+        <button type="button" onclick="removeEingabe()">-</button>
+
+      </div>
+
+      <h1 class="sectortitle">Zahlung</h1>
+
+      <input type="radio" id="ZbL" name="Zahlung" value="ZbL">
+      <label for="ZbL"> Zahlung bei Lieferung</label><br>
+      <input type="radio" id="ZpR" name="Zahlung" value="ZpR">
+      <label for="ZpR"> Zahlung per Rechnung</label><br>
+      <input type="radio" id="Bz" name="Zahlung" value="Bz">
+      <label for="Bz"> Bereits bezahlt</label><br><br>
+
+      <h1 class="sectortitle">Kostenaufstellung</h1>
+
+      <div class="block">
+        <label class="label_gebühren">PREIS</label>
+        <input type="text" id="preise" name="preis" class="form__input_kosten" />
+      </div>
+      <div class="block">
+        <label class="label_gebühren">+Zustellgebühren</label>
+        <input id="zugeb" name="Zgebühren" class="form__input_kosten" placeholder="00.00€" onblur="gesamtpreis()"/>
+      </div>
+      <div class="block">
+        <label class="label_gebühren">+ Entsorgungsgebühr</label>
+        <input id="engeb" name="Egebühren" class="form__input_kosten" placeholder="00.00€" onblur="gesamtpreis()"/>
+      </div>
+      <div class="block">
+        <label class="label_gebühren">+ Montagegebühr</label>
+        <input id="mogeb" name="Mgebühren" class="form__input_kosten" placeholder="00.00€" onblur="gesamtpreis()" />
+      </div>
+      <div class="block">
+        <label class="label_gebühren">GESAMTBETRAG</label>
+        <input id="ges" type="text" name="gesamtbet" class="form__input_kosten" />
+      </div>
+      <div class="block">
+        <label class="label_gebühren">- Anzahlung</label>
+        <input id="anzb" name="anzahlung" class="form__input_kosten" placeholder="00.00€" onblur="endpreis()"/>
+      </div>
+      <div class="block">
+        <label class="label_gebühren">- Rabatt</label>
+        <input id="rabb" name="rabatt" class="form__input_kosten" placeholder="00.00€" onblur="endpreis()" />
+      </div>
+      <div class="block">
+        <label class="label_gebühren">ENDBETRAG</label>
+        <input id="endb" type="text" name="endbet" class="form__input_kosten" />
+      </div>
+
+      <h1 class="sectortitle">Anmerkungen</h1>
+
+      <textarea name="comment"></textarea>
+      <!--required einfügen-->
+      <input class="btn" type="submit" value="Submit" href="#" onclick="loadPage()"> 
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>

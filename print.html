@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="print.css" rel="stylesheet" type="text/css" />
+  <title>Lieferschein</title>
+</head>
+<body onload="uebergabe()">
+<div id="overall">
+    <div id="header">
+      <div style="display:inline-block; vertical-align: center;">
+         <h1 class="first">Frachtschein</h1>
+      </div>
+      <div style="display:inline-block; float: right;">
+        <img src="logo/logo.png" width="125" height="80">
+      </div>
+    </div>
+ 
+    <div id="navbar">
+      <h3>Kundendaten</h3>
+      <p>Titel</p>
+      <p id="titel"></p>
+      <p>Vorname</p>
+      <p>Nachname</p>
+      <p>Adresse</p>
+      <p>PLZ</p>
+      <p>Telefon</p>
+    </div>
+ 
+    <div id="main">
+      <h3>Lieferdaten</h3>
+      <p>Filiale</p>
+      <p>Verkäuferin</p>
+      <p>Liefernummer</p>
+      <p>Lieferdatum</p>
+      <p>Lieferzeit</p>
+      <p>Amerkungen / Wegbeschreibung</p>
+    </div>
+ 
+    <div style="clear: both;"></div>
+    <div id="footer">
+      <h3>Ware</h3>
+      <table id="interactivwe">
+        <tr>
+          <th width="20%">Menge</th>
+          <th width="40%">Bezeichnung</th>
+          <th width="25%">Einzelpreis/€</th>
+          <th width="30%">Gesamtpreis/€</th>
+        </tr>
+        <tr>
+          <td>wadfeas</td>
+          <td>asdf</td>
+          <td>asdf</td>
+          <td>asfd</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>+ Zustellgebühr</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="ohnestr"></td>
+          <td class="ohnestr"></td>
+          <td class="ohnestr">+ Entsorgungsgebühr</td>
+          <td class="ohnestr"></td>
+        </tr>
+        <tr>
+          <td class="ohnestr"></td>
+          <td class="ohnestr"></td>
+          <td class="ohnestr">+ Montagegebühr</td>
+          <td class="ohnestr"></td>
+        </tr>
+        <tr>
+          <td class="ohnestr"></td>
+          <td class="ohnestr"></td>
+          <td class="ohnestr">Gesamtbetrag</td>
+          <td class="ohnestr"></td>
+        </tr>
+        <tr>
+          <td class="ohnestr"></td>
+          <td class="ohnestr"></td>
+          <td class="ohnestr">- Anzahlung</td>
+          <td class="ohnestr"></td>
+        </tr>
+        <tr>
+          <td class="ohnestr"></td>
+          <td class="ohnestr"></td>
+          <td class="ohnestr">- Rabatt</td>
+          <td class="ohnestr"></td>
+        </tr>
+        <tr>
+          <td class="ohnestr"></td>
+          <td class="ohnestr"></td>
+          <td class="ohnestr">Restbetrag</td>
+          <td class="ohnestr"></td>
+        </tr>
+      </table>
+  </div>
+  <div>
+    <h3>Empfangsbestätigung</h3>
+    <p>Ich/Wir habe(n), obenstehende Atrikel in ordnungsgemäßen und vereinbartem Zustand erhalten.</p>
+    <br>
+    
+    <table class="table2">
+      <tr>
+        <td class="empfang">[Ort, Datum]</td>
+        <td class="empfang">[Name, Vorname]</td>
+        <td class="empfang">[Unterschrift]</td>
+      </tr>
+    </table>
+
+    <h3>Empfangsbestätigung</h3>
+    <p>Ich/Wir habe(n), obenstehende Restbetrag erhalten.</p>
+    <br>
+    
+    <table class="table2">
+      <tr>
+        <td class="empfang">[Ort, Datum]</td>
+        <td class="empfang">[Name, Vorname]</td>
+        <td class="empfang">[Unterschrift]</td>
+      </tr>
+    </table>
+  </div>
+</div>
+   
+<div class="druck">
+  <input class="no-overall button" type="button" onclick={window.print()} value="print" /> 
+</div>
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+</html>

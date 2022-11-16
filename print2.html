@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="print2.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Lieferungen</title>
+</head>
+<body>
+  <div id="overall">
+    <div id="header">
+      <div style="display:inline-block; vertical-align: center;">
+         <h1 class="first">Lieferungen</h1>
+      </div>
+      <div style="display:inline-block; float: right;">
+        <img src="logo/logo.png" width="125" height="80">
+      </div>
+    </div>
+ 
+    <div id="navbar">
+      <table>
+        <tr>
+          <th>Filiale</th>
+          <th>Kommision</th>
+          <th>PLZ</th>
+          <th>Lieferdatum</th>
+          <th>Lieferzeit</th>
+          <th>Telefonnummer</th>
+          <th>Verkäufer/in</th>
+          <th>Lieferungsbetrag</th>
+        </tr>
+      </table>
+    </div>
+ 
+    <div style="clear: both;"></div>
+    
+    <div id="footer">
+      <table>
+        <tr class="datum_row">
+          <th class="datum_th">Filiale</th>
+          <th class="datum_th">Nachname</th>
+          <th class="datum_th">PLZ</th>
+          <th class="datum_th">Lieferdatum</th>
+          <th class="datum_th">Lieferzeit</th>
+          <th class="datum_th">Telefonnummer</th>
+          <th class="datum_th">Verkäufer/in</th>
+          <th class="datum_th">Lieferungsbetrag</th>
+        </tr>
+      </table>
+      <table>
+        <tr class="tr_line">
+          <th class="datum_th">Anmerkungen:</th>
+          <th class="datum_th_anm">blablabla</th>
+          <th class="datum_th">Zahlungsbetrag:</th>
+          <th class="datum_th_bet">10€</th>
+        </tr>
+      </table>
+  </div>
+</div>
+<div class="druck">
+  <input class="no-overall button" type="button" onclick={window.print()} value="print" /> 
+</div>
+</body>
+</html>

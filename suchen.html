@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lieferschein suchen</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/e933c2f049.js" crossorigin="anonymous"></script>
+</head>
+<body class="bodyerstellen">
+  
+    <div class="icon-bar2">
+      <a href="menü.html"><i class="fa fa-home"></i></a> 
+      <a href="erstellen.html"><i class="fa-solid fa-pen"></i></a> 
+    </div>
+
+    <div class="container">
+      <p class="texts">Suche mit Liefernummer</p>
+      <input id="liefern" class="search" type="text" placeholder="Liefernummer eingeben...">
+      <p class="texts">Suche mit Datum</p>
+      <input id="lieferd" name="ldatum" type="date" class="calender1" value="">
+      <button type="button" class="button" onclick="loadPage2()">Suchen</button>
+    </div>
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+</html>

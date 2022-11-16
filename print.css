@@ -1,0 +1,137 @@
+body {
+    background: rgb(204,204,204); 
+}
+
+html {
+    font-size: 75%;
+    font-family: arial, helvetica, sans-serif;
+    line-height: 1;
+}
+ 
+body {
+    background-color: #ffffff;
+}
+ 
+#overall {
+    float: top;
+    width: 700px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+#header {
+    position: relative;
+    height: 80px;
+    background-color: #00639e;
+    border: 1px;
+    border-color: #00639e;
+    border-style: solid;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+}
+ 
+#navbar {
+    float: left;
+    width: 250px;
+    border: 1px;
+    border-color:#00639e;
+    border-style: solid;
+    margin-right: 10px;
+}
+ 
+#main {
+    border: 1px;
+    border-color: #00639e;
+    border-style: solid;
+    margin-left: 260px;
+}
+ 
+#footer {
+    margin-top: 10px;
+    border: 1px;
+    border-color:#00639e;
+    border-style: solid;
+}
+
+.first{
+  margin-top: 2rem;
+  margin-bottom: 1.3rem;
+  margin-left: 1rem;
+  text-align: left;
+  font-size:2rem;
+  color: white;
+}
+
+h3{
+  padding-left: 0.3rem;
+  padding-top: 0rem;
+}
+
+div p{
+  padding-left: 0.3rem;
+}
+
+table{
+  border: 1px;
+}
+
+th, td{
+  text-align: left;
+  padding: 0.5rem;
+}
+
+td{
+  border-top: 1px solid black;
+}
+
+.ohnestr{
+  border-top: none;
+}
+
+.table2{
+  border-spacing: 25px;
+}
+
+.empfang{
+  width: 200px;
+}
+
+.button {
+  width: 21cm;
+  padding: 1rem 2rem;
+  margin-left: 300px;
+  margin-top:0.75rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  background: #cfcfcf;
+}
+
+.button:hover ,
+.btn:hover {
+  background: #3fa4c6;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.overall {
+	display: none;
+  
+}
+
+@media print {
+	.no-overall  {
+		display: none;
+	}
+	.overall  {
+		display: block;
+	}
+}

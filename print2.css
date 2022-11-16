@@ -1,0 +1,91 @@
+body {
+    background: rgb(204,204,204); 
+}
+
+html {
+    font-size: 80%;
+    font-family: arial, helvetica, sans-serif;
+    line-height: 1;
+}
+ 
+body {
+    background-color: #ffffff;
+}
+ 
+#overall {
+    float: top;
+    width: 1000px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+#header {
+    position: relative;
+    height: 80px;
+    background-color: #00639e;
+    border: 1px;
+    border-color: #00639e;
+    border-style: solid;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#navbar {
+    float: left;
+    width: 1000px;
+    height: 25px;
+    background-color: #F5ECCE;
+    margin-right: 10px;
+}
+
+#footer {
+    margin-top: 10px;
+    border: none;
+}
+
+.first{
+  margin-top: 2rem;
+  margin-bottom: 1.3rem;
+  margin-left: 1rem;
+  text-align: left;
+  font-size:2rem;
+  color: white;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.datum_row{
+  border-bottom: none;
+}
+
+th, td{
+  text-align: left;
+  width: 13%;
+}
+
+.datum_th{
+  font-weight: normal;
+  text-align: left;
+  padding-bottom: 0.7rem;
+}
+
+.datum_th_anm{
+  font-weight: normal;
+  text-align: left;
+  width: 645px;
+  padding-bottom: 0.7rem;
+}
+
+.datum_th_bet{
+  font-weight: normal;
+  text-align: left;
+  width: 95px;
+  padding-bottom: 0.7rem;
+}
+
+.tr_line th{
+  border-bottom: 1px solid black;
+}
